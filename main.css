@@ -1,0 +1,41 @@
+* {
+    font-family: "Open Sans" !important;
+}
+
+img {
+    width: 500px;
+}
+
+nav {
+    position: sticky !important;
+    top: 0;
+    z-index: 100;
+}
+
+.anim {
+    translate: -270px;
+    opacity: 0;
+}
+
+.python {
+    display: none;
+    font-size: 1.8em;
+}
+
+.show {
+    display: block;
+    animation: slide;
+    animation-duration: 0.6s;
+}
+
+@keyframes slide{
+    from {translate: -100px; opacity: 0;}
+    to {translate: 0px; opacity: 1;}
+}
+
+form {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}

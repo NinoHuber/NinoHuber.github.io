@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Header -->
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Nikola Hrkać</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Početna</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#projekti">Projekti</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#kontakt">Kontakt</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <!-- O meni -->
+          <div class="container-fluid bg-light py-4 anim" id="pocetna">
+            <h1>O meni</h1>
+            <p>
+                Ja sam se bavio sa HTML-om i CSS-os na početku mog školovanja u srednjoj školi. Studirao sam u Srednja Škola Fausta Vrančića smjer web dizajn, učio sam 
+                osnove od programske jezike C++, C#, XML, Java i JavaScript, radio sam na projekte i zadatke za školski rad i također na male osobne projekte tako 
+                da bolje razumijem kako rade jezici koje sam koristio. Nakon srednje škole sam započeo studirati u FPMOZ-u gdje sam naučio programirati u python i
+                ponovo sam prešao gradivo za HTML, CSS, JavaScript, i dodatno sam naučio CSS framework BootStrap.
+            </p>
+          </div>
+
+          <!-- Projekti web dizajn -->
+          <div class="container-fluid bg-light py-3 border-top anim" id="projekti">
+            <h1>Projekti (web)</h1>
+            <div class="row gap-4">
+                <div class="card border-primary mb-3 col">
+                    <div class="card-header">Background Changer</div>
+                    <div class="card-body">
+                      <img src="./projekti web/bgchanger/slika.png" alt="slika projekta">
+                      <p>Mijenja se pozadina</p>
+                      <div class="row gap-2">
+                        <a class="col btn btn-primary" target="_blank" href="./projekti web/bgchanger/index.html">Pregled</a>
+                        <a class="col btn btn-primary" href="./projekti web/bgchanger/bgchanger.zip" download>Download</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card border-primary mb-3 col">
+                    <div class="card-header">Digitalni klavir</div>
+                    <div class="card-body">
+                        <img src="./projekti web/klavir/slika.png" alt="slika projekta">
+                        <p>Može se svirati digitalni klavir</p>
+                        <div class="row gap-2">
+                          <a class="col btn btn-primary" target="_blank" href="./projekti web/klavir/index.html">Pregled</a>
+                          <a class="col btn btn-primary" href="./projekti web/klavir/klavir.zip" download>Download</a>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="card border-primary mb-3 col">
+                    <div class="card-header">Stopwatch</div>
+                    <div class="card-body">
+                        <img src="./projekti web/stoperica/slika.png" alt="slika projekta">
+                        <p>Jednostavna stranica gdje se koristi štoperica</p>
+                        <div class="row gap-2">
+                          <a class="col btn btn-primary" target="_blank" href="./projekti web/stoperica/index.html">Pregled</a>
+                          <a class="col btn btn-primary" href="./projekti web/stoperica/stoperica.zip" download>Download</a>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="row gap-4">
+                <div class="card border-primary mb-3 col">
+                    <div class="card-header">Spark</div>
+                    <div class="card-body">
+                        <img src="./projekti web/spark/slika.png" alt="slika projekta">
+                        <p class="mt-3">Zadatak koji smo radili kod SPARK</p>
+                        <div class="row gap-2">
+                          <a class="col btn btn-primary" target="_blank" href="./projekti web/spark/index.html">Pregled</a>
+                          <a class="col btn btn-primary" href="./projekti web/spark/index.html" download>Download</a>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="card border-primary mb-3 col">
+                    <div class="card-header">JoyGame</div>
+                    <div class="card-body">
+                        <img src="./projekti web/joygame/slika.png" alt="slika projekta">
+                        <p class="mt-3">Projekt za Teoriju Dizajna</p>
+                        <div class="row gap-2">
+                          <a class="col btn btn-primary" target="_blank" href="./projekti web/joygame/index.html">Pregled</a>
+                          <a class="col btn btn-primary" href="./projekti web/joygame/joygame.zip" download>Download</a>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="card border-primary mb-3 col">
+                    <div class="card-header">List kamen makaze</div>
+                    <div class="card-body">
+                        <img src="./projekti web/zavrsnirad/slika.png" alt="slika projekta">
+                        <p class="mt-3">Moj završni rad</p>
+                        <div class="row gap-2">
+                          <a class="col btn btn-primary" target="_blank" href="./projekti web/zavrsnirad/index.html">Pregled</a>
+                          <a class="col btn btn-primary" href="./projekti web/zavrsnirad/zavrsnirad.zip" download>Download</a>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+
+          
+
+          <!-- Projekti python -->
+          <div class="container-fluid bg-light py-3 border-top anim">
+            <h1>Projekti (python)</h1>
+            <div class="row align-items-center">
+                <div class="col-1 row">
+                    <button class="btn btn-primary" onclick="slider('prosli')">Prošli</button>
+                </div>
+                <div class="col-10 py-3 text-light border bg-dark" style="height: 600px; overflow: scroll;border: solid 4px rgb(133, 133, 133) !important;">
+                    <pre class="python show">
+def parNepar(n):
+&#x09;for i in range(n):
+&#x09;&#x09;if i % 2 == 0: 
+&#x09;&#x09;yield "parni broj: " + str(i)
+&#x09;else: 
+&#x09;&#x09;yield "neparni broj: " + str(i) 
+&#x09;for broj in parNepar(15): 
+&#x09;&#x09;print(broj)
+                    </pre>
+
+                    <pre class="python">
+lozinka1 = "kljaslifjliajwflj200"
+lozinka2 = "aeiou"
+lozinka3 = "DobraLozinka9000."
+lozinke = [lozinka1, lozinka2, lozinka3]                        
+def provjera(loz):
+&#x09;if re.fullmatch(r"(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{9,}\.$", loz):
+&#x09;&#x09;print("lozinka je dobra")
+&#x09;else:
+&#x09;&#x09;print("lozinka nije dovoljno jaka")            
+&#x09;for lozinka in lozinke:
+&#x09;provjera(lozinka)
+                    </pre>
+
+                    <pre class="python">
+import random
+imena = [
+&#x09;"Vedran", "Andrea", "Ana", "Marta", "Martina", "Iva", "Mirko", "Jakov", "Marko", "Mihaela",
+&#x09;"Petar", "David", "Ivan", "Ivan", "Ana", "Dinko", "Petar", "Sanja", "Nikola", "Vinko", "Mihael",
+&#x09;"Zdravko", "Patrik", "Kristijan", "Marin", "Kristijan", "Petar", "Mateo", "Bože", "Ivan-Kajo",
+&#x09;"Matej", "Karlo", "Ana", "Lucija", "Bože", "Emanuel", "Ante-Roko", "Blaž", "Marijanela",
+&#x09;"Leonarda", "Antonio", "Ana-Maria", "Petra", "Leo", "Mario", "Marijana", "Jelena", "Stjepan",
+&#x09;"Dario", "Matej"
+&#x09;]                        
+ucenici = {}
+brojOcjena = {}
+polozeno = 0                        
+for student in imena:
+&#x09;randomOcjena = random.randint(1, 5)
+&#x09;ucenici[student] = randomOcjena
+&#x09;if randomOcjena in brojOcjena:
+&#x09;&#x09;brojOcjena[randomOcjena] += 1
+&#x09;else:
+&#x09;&#x09;brojOcjena[randomOcjena] = 1
+&#x09;if randomOcjena > 1:
+&#x09;&#x09;polozeno += 1            
+postotak = int(polozeno / len(imena) * 100)                        
+print(ucenici, "\n\nbroj ocjena: ", brojOcjena, "\n\nPostotak prolaznosti: ", postotak, "%")
+                    </pre>
+
+                    <pre class="python">
+from csv import reader
+import csv                        
+ocjene = {}
+studenti = []                        
+with open('rezultati.csv', 'r', encoding="utf8") as read_obj:
+&#x09;csv_reader = reader(read_obj)
+&#x09;data=[tuple(line) for line in csv.reader(read_obj)]                 
+print("ucenici koji su polozili: ")
+for osoba in data:
+&#x09;ime, prezime, bodovi, ocjena = osoba
+&#x09;if int(bodovi) >= 50:
+&#x09;&#x09;print(osoba)
+&#x09;if ocjena in ocjene:
+&#x09;&#x09;ocjene[ocjena] += 1
+&#x09;else:
+&#x09;&#x09;ocjene[ocjena] = 1
+&#x09;punoime = [ime, prezime]
+&#x09;studenti.append(punoime)                      
+print("ukupne ocjene: ")
+print(ocjene)                        
+print("ucenici po prezimenu od a do z: ")
+poredani = sorted(studenti, key=lambda x: x[1])
+counter = 0
+for osoba in poredani:
+&#x09;print(poredani[counter])
+&#x09;counter += 1
+                    </pre>
+
+                    <pre class="python">
+import re
+fpmozMail = input("Unesite vas fpmoz mail: ")                        
+if re.fullmatch(r"([a-z]+)\.([a-z]+)(\@fpmoz\.sum\.ba)$", fpmozMail):
+&#x09;print("mail je pravilan")
+else:
+&#x09;print("mail je nepravilan")                  
+eduID = input("Unesite vas eduID: ")                        
+ime = fpmozMail.split(".")[0]
+prezime = fpmozMail.split(".", 1)[1].split("@")[0]                        
+if eduID == ime[0] + prezime + "@sum.ba":
+&#x09;if re.fullmatch(r"([a-z]+)([0-9]+)?(\@sum\.ba)$", eduID):
+&#x09;&#x09;print("eduID je pravilan")
+&#x09;else:
+&#x09;&#x09;print("eduID je nepravilan")
+                    </pre>
+                </div>
+                <div class="col-1 row">
+                    <button class="btn btn-primary" onclick="slider('sljedeci')">Sljedeći</button>
+                </div>
+            </div>
+          </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark" id="kontakt">
+            <div class="row text-light p-3">
+                <div class="col-4 border-end border-2">
+                    <h3>Kontakt Informacija</h3>
+                    <ul class="pt-3">
+                        <li>Email: mojemail@gmail.com</li>
+                        <li>Broj telefona: +12345678</li>
+                        <li>Adresa: 308 Negra Arroyo Lane, Albuquerque, New Mexico</li>
+                    </ul>
+                    <div class="row px-3">
+                      <a href="https://github.com/NinoHuber" target="_blank"><img src="./git.png" alt="github logo" style="width: 60px;"></a>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <h3>Pošalji Poruku</h3>
+                    <form action="" class="pt-3">
+                      <div>
+                        <label for="ime">Unesite ime:</label>
+                        <input type="text" id="ime" placeholder="min 3 slova">
+                      </div>
+
+                      <textarea name="komentar" id="komentar" placeholder="komentar" style="grid-row: span 2;"></textarea>
+
+                      <div>
+                        <label for="">Ocjena:</label>
+                        <label for="1">1</label>
+                        <input type="radio" name="ocjena" id="jedan" class="form-check-input">
+                        <label for="2">2</label>
+                        <input type="radio" name="ocjena" id="dva" class="form-check-input">
+                        <label for="3">3</label>
+                        <input type="radio" name="ocjena" id="tri" class="form-check-input">
+                        <label for="4">4</label>
+                        <input type="radio" name="ocjena" id="cetiri" class="form-check-input">
+                        <label for="5">5</label>
+                        <input type="radio" name="ocjena" id="pet" class="form-check-input" checked>
+                      </div>
+
+                      <button class="btn btn-primary mt-4" style="grid-column: span 2;" onclick="verifikacija();return false">Pošalji</button>
+
+                    </form>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="./node_modules/animejs/lib/anime.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
