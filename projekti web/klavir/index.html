@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="piano">
+        <button class="bijela" id="nota1" onclick="sviraj('A')">d</button>
+        <button class="crna" id="nota8" onclick="sviraj('AB')">r</button>
+        <button class="bijela" id="nota2" onclick="sviraj('B')">f</button>
+        <button class="bijela" id="nota3" onclick="sviraj('C')">g</button>
+        <button class="crna" id="nota9" onclick="sviraj('CD')">z</button>
+        <button class="bijela" id="nota4" onclick="sviraj('D')">h</button>
+        <button class="crna" id="nota10" onclick="sviraj('DE')">u</button>
+        <button class="bijela" id="nota5" onclick="sviraj('E')">j</button>
+        <button class="bijela" id="nota6" onclick="sviraj('F')">k</button>
+        <button class="crna" id="nota11" onclick="sviraj('FG')">o</button>
+        <button class="bijela" id="nota7" onclick="sviraj('G')">l</button>
+    </div>
+
+    <audio src="A.mp3" style="display:none;" id="A"></audio>
+    <audio src="B.mp3" style="display:none;" id="B"></audio>
+    <audio src="C.mp3" style="display:none;" id="C"></audio>
+    <audio src="D.mp3" style="display:none;" id="D"></audio>
+    <audio src="E.mp3" style="display:none;" id="E"></audio>
+    <audio src="F.mp3" style="display:none;" id="F"></audio>
+    <audio src="G.mp3" style="display:none;" id="G"></audio>
+    <audio src="AB.mp3" style="display: none;" id="AB"></audio>
+    <audio src="CD.mp3" style="display: none;" id="CD"></audio>
+    <audio src="DE.mp3" style="display: none;" id="DE"></audio>
+    <audio src="FG.mp3" style="display: none;" id="FG"></audio>
+
+    <script src="main.js"></script>
+</body>
+</html>

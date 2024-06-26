@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoyGame</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="igre.css">
+    <link rel="stylesheet" href="add.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="purchase.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body onload="showLanding()">
+    
+    <header>
+        <div class="logo" onclick="showLanding()">
+            <img src="logo.png" alt="">
+            <p class="logoText">JoyGame</p>
+        </div>
+        <div class="nav">
+            <p onclick="showGames()">Games</p>
+            <p onclick="showContact()">Contact</p>
+        </div>
+        <div></div>
+        <img src="plus.png" alt="" id="add" onclick="addGameForm()">
+    </header>
+
+    <div class="addGameForm hide" id="addGameForm">
+        <div class="form">
+            <div class="left">
+                <label for="">Title: </label>
+                <input type="text" id="gameTitle">
+                <label for="">Descritpion: </label>
+                <textarea name="" id="description" cols="50" rows="5"></textarea>
+                <label for="">Price: </label>
+                <input type="text" id="price">
+                <label for="">Size: </label>
+                <input type="text" id="fileSize">
+                <label for="">Developer: </label>
+                <input type="text" id="developer">
+            </div>
+
+            <div class="right">
+                <img src="slike/noimage.png" alt="">
+            </div>
+
+            <button id="cancel" class="formBtn" onclick="cancelAddGame()">Cancel</button>
+            <button id="addGame" class="formBtn" onclick="addGame()">Add Game</button>
+        </div>
+    </div>
+
+    <div class="purchaseContainer hide" id="purchaseMenu">
+        <div class="purchaseForm">
+            <h2 style="grid-column: 1 / 3; padding-bottom: 25px;" id="purchaseTitle">PURCHASE</h2>
+            <label for="">Full name: </label>
+            <input type="text">
+            <label for="">Credit card number: </label>
+            <div class="creditNumbers">
+                <input type="text" size="7"> <input type="text" size="7"> <input type="text" size="7">
+            </div>
+            <label for="">CVV/CVC: </label>
+            <input type="text">
+            <label for="">Email: </label>
+            <input type="text">
+            <p style="grid-column: 1 / 3;" id="purchaseText"></p>
+            <button onclick="cancelPurchase()">Cancel</button>
+            <button onclick="cancelPurchase()">Purchase</button>
+        </div>
+    </div>
+
+    <div class="landing" id="landing">
+        <div class="newest landing-container">
+            <h1>NEWEST</h1>
+            <img src="slike/streetRace.png" alt="" class="landingpic" onclick="purchase('streetrace', '$22?')">
+            <img src="slike/druga.png" alt="" class="landingpic" onclick="purchase('fear', '$8?')">
+            <img src="slike/treca.png" alt="" class="landingpic" onclick="purchase('villagebuilder', '$6?')">
+            <img src="slike/seasworn.png" alt="" class="landingpic" onclick="purchase('seasworn', '$18?')">
+            <img src="slike/spacewars.png" alt="" class="landingpic" onclick="purchase('spacewars', '$15?')">
+            <img src="slike/hostagecrisis.png" alt="" class="landingpic" onclick="purchase('hostagecrisis', '$35?')">
+        </div>
+
+        <div class="discount landing-container">
+            <h1>ON DISCOUNT</h1>
+            <img src="slike/cubetopia.png" alt="" class="landingpic" onclick="purchase('cubetopia', '$5?')">
+            <img src="slike/illusion.png" alt="" class="landingpic" onclick="purchase('illusion', '$10?')">
+            <img src="slike/theTrees.png" alt="" class="landingpic" onclick="purchase('thetrees', '$5?')">
+            <img src="slike/goingtomars.png" alt="" class="landingpic" onclick="purchase('goingtomars', '$25?')">
+            <img src="slike/bigmoney.png" alt="" class="landingpic" onclick="purchase('bigmoney', 'free?')">
+            <img src="slike/nohope.png" alt="" class="landingpic" onclick="purchase('nohope', '$10?')">
+        </div>
+
+        <div class="popular landing-container" style="margin-bottom: 30px;">
+            <h1>POPULAR</h1>
+            <img src="slike/setupdecorator.png" alt="" class="landingpic" onclick="purchase('setupdecorator', '$10?')">
+            <img src="slike/bloodstains.png" alt="" class="landingpic" onclick="purchase('bloodstains', '$12?')">
+            <img src="slike/westfrontier.png" alt="" class="landingpic" onclick="purchase('westfrontier', '$40?')">
+            <img src="slike/brightlight.png" alt="" class="landingpic" onclick="purchase('brightlight', '$15?')">
+            <img src="slike/pngsim.png" alt="" class="landingpic" onclick="purchase('pngsim', '$11?')">
+            <img src="slike/goodbye.png" alt="" class="landingpic" onclick="purchase('goodbye', '$4?')">
+        </div>
+    </div>
+
+    
+
+    <div id="igre" class="hide igre">
+        <div class="igra1 igra">
+            <div class="thumbnail" style="background-image: url('slike/bloodstains.png'); background-position: center;"></div>
+            <p>Description: A fast paced gory hack and slash where the main objective is to cover the map in as much blood as possible. You have several 
+                weapons available to your disposal including guns and blades. Beat the level as fast as possible to earn points to level up your gear. Intended 
+                for a mature audience.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 4.11.2018</li>
+                <li>Size: 7GB</li>
+                <li>Developer: Hat Studio</li>
+                <li>Rating: 7/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('bloodstains', '$12?')">PURCHASE($12)</button>
+        </div>
+        <div class="igra2 igra">
+            <div class="thumbnail" style="background-image: url('slike/brightlight.png'); background-position: center;"></div>
+            <p>Description: One day a bright light swept the globe and mysterious shadow people emerged. You are seemingly the only human left and you 
+                try to understand what happened to the world. There is only one clear answer.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 27.4.2021</li>
+                <li>Size: 731MB</li>
+                <li>Developer: Matthew Thomas</li>
+                <li>Rating: 8/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('brightlight', '$15?')">PURCHASE($15)</button>
+        </div>
+        <div class="igra3 igra">
+            <div class="thumbnail" style="background-image: url('slike/cubetopia.png'); background-size: 100%;"></div>
+            <p>Description: BUILD the perfect city your brain can imagine. CONSTRUCT the best design for every industrial sector. AUTOMATE everything 
+                using machines and robots. MAKE your dreams of the perfect production line come true in this simple city building, resource management, real-time 
+                game.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 18.9.2019</li>
+                <li>Size: 496MB</li>
+                <li>Developer: Huang Bey Inc.</li>
+                <li>Rating: 5/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('cubetopia', '$5?')">PURCHASE($5)</button>
+        </div>
+        <div class="igra4 igra">
+            <div class="thumbnail" style="background-image: url('slike/goingtomars.png'); background-position: top;"></div>
+            <p>Description: The Earth is running out of room, so humanity must expand outwards to the stars. You must first terraform Mars to make it fit 
+                for human life. Next, you need to slowly colonize the red planet with only a handful of people. After that you must keep multiplying your 
+                population until the entire surface of Mars is owned by the human race.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 6.1.2021</li>
+                <li>Size: 20GB</li>
+                <li>Developer: Stellar</li>
+                <li>Rating: 9/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('goingtomars', '$25?')">PURCHASE($25)</button>
+        </div>
+        <div class="igra5 igra">
+            <div class="thumbnail" style="background-image: url('slike/illusion.png'); background-position: center;"></div>
+            <p>Description: What does reality mean? Who made us? Why are we here? When is your time up? What will you uncover in this experience?</p>
+            <ul class="specs">
+                <li>Release Date: 14.5.2017</li>
+                <li>Size: 11GB</li>
+                <li>Developer: Henry</li>
+                <li>Rating: 10/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('illusion', '$10?')">PURCHASE($10)</button>
+        </div>
+        <div class="igra6 igra">
+            <div class="thumbnail" style="background-image: url('slike/bigmoney.png'); background-position: top;"></div>
+            <p>Description: Earn real free money, become rich in a matter of minutes, invest in crypto to double your earnings, save money by earning more money 
+                from us, feed the blockchain, digital currency, free to play, play now.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 25.11.2022</li>
+                <li>Size: 4.7GB</li>
+                <li>Developer: Cash Inc.</li>
+                <li>Rating: 2/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('bigmoney', 'free?')">PURCHASE(FREE)</button>
+        </div>
+        <div class="igra7 igra">
+            <div class="thumbnail" style="background-image: url('slike/druga.png'); background-position: top;"></div>
+            <p>Description: Waking up in a dim room, you find yourself trapped in chains. Not remembering anything before, you try to escape this facility unaware 
+                of the dangers that might lurk inside. Eliminate your fear of the unkown and pursue your freedom that is locked behind the exit. 
+            </p>
+            <ul class="specs">
+                <li>Release Date: 31.10.2020</li>
+                <li>Size: 7GB</li>
+                <li>Developer: Stephen Morris</li>
+                <li>Rating: 8/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('fear', '$8?')">PURCHASE($8)</button>
+        </div>
+        <div class="igra8 igra">
+            <div class="thumbnail" style="background-image: url('slike/goodbye.png'); background-position: top;"></div>
+            <p>Description: After uncovering the truth of the world you decide that you can't bear it anymore. Nothing will ever be the same. 
+                Decide how you want to end your journey.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 1.1.2021</li>
+                <li>Size: 860MB</li>
+                <li>Developer: Terry Noris</li>
+                <li>Rating: 9/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('goodbye', '$4?')">PURCHASE($4)</button>
+        </div>
+        <div class="igra9 igra">
+            <div class="thumbnail" style="background-image: url('slike/hostagecrisis.png'); background-position: 70% 10%;"></div>
+            <p>Description: Play as either a police officer or a criminal in this quick paced team deathmatch. Two teams of five will have their own 
+                unique arsenal of weapons to choose and prepare to fight one another. Will you be the one to stop the bad guys? Or will you be the one 
+                causing mayhem and destruction in a peaceful city. Choose your side.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 9.8.2019</li>
+                <li>Size: 28GB</li>
+                <li>Developer: Comp Cave</li>
+                <li>Rating: 7/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('hostagecrisis', '$35?')">PURCHASE($35)</button>
+        </div>
+        <div class="igra10 igra">
+            <div class="thumbnail" style="background-image: url('slike/treca.png'); background-position: top;"></div>
+            <p>Description: A cute 2D pixel art city builder where the goal of the game is to have fun and build your own little village with tiny people 
+                who will work for you to make sure the village is nice and tidy.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 15.3.2022</li>
+                <li>Size: 2GB</li>
+                <li>Developer: David Lasinsky</li>
+                <li>Rating: 10/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('villagebuilder', '$6?')">PURCHASE($6)</button>
+        </div>
+        <div class="igra11 igra">
+            <div class="thumbnail" style="background-image: url('slike/pngsim.png'); background-position: bottom;"></div>
+            <p>Description: Ever downloaded a transparent image only to find out it's just a .jpg? Well now you can feel the pain once more in this simulation!</p>
+            <ul class="specs">
+                <li>Release Date: 8.1.2020</li>
+                <li>Size: 400MB</li>
+                <li>Developer: N/A</li>
+                <li>Rating: 0/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('pngsim', '$11?')">PURCHASE($11)</button>
+        </div>
+        <div class="igra12 igra">
+            <div class="thumbnail" style="background-image: url('slike/nohope.png'); background-position: 50% 55%;"></div>
+            <p>Description: It has been 12 years since the virus outbreak. You live in a reality where you must fight for your own survival. Collect food, 
+                carry weapons, fight zombies. Barricade yourself in a secure house or build your own shelter in the woods. Try to last as long as you can without
+                dying.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 28.10.2021</li>
+                <li>Size: 6GB</li>
+                <li>Developer: Bit Studio</li>
+                <li>Rating: 5/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('nohope', '$10?')">PURCHASE($10)</button>
+        </div>
+        <div class="igra13 igra">
+            <div class="thumbnail" style="background-image: url('slike/spacewars.png'); background-position: 70% 40%;"></div>
+            <p>Description: The Federation declared war on the space rebels and, as the main general of your army, it is up to you to use bullets and 
+                lasers to silence the rebellion. Fight back to reclaim lost territory. Upgrade your fleets so you can eliminate anyone who stands in 
+                your way. Find the enemy flagship and destroy it to bring back the peace your empire once had.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 5.2.2022</li>
+                <li>Size: 9GB</li>
+                <li>Developer: Stellar</li>
+                <li>Rating: 8/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('spacewars', '$15?')">PURCHASE($15)</button>
+        </div>
+        <div class="igra14 igra">
+            <div class="thumbnail" style="background-image: url('slike/seasworn.png'); background-position: top;"></div>
+            <p>Description: Sail the seven seas and collect treasure. Fend off against hostile ships with your mighty cannons or board them with your 
+                crew. Dominate the ocean, become the richest man alive, find and kill the legendary Kraken who terrorizes the waters.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 30.8.2019</li>
+                <li>Size: 11GB</li>
+                <li>Developer: Pilory</li>
+                <li>Rating: 9/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('seasworn', '$18?')">PURCHASE($18)</button>
+        </div>
+        <div class="igra15 igra">
+            <div class="thumbnail" style="background-image: url('slike/setupdecorator.png'); background-position: 50% 45%;"></div>
+            <p>Description: Decorate the ideal room. Paint the walls, add furniture from an extensive catalog, tile the floor, hang beatiful paintings, 
+                share your designs with your friends. The only limit is your imagination.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 17.7.2021</li>
+                <li>Size: 3.1GB</li>
+                <li>Developer: Light Studio</li>
+                <li>Rating: 6/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('setupdecorator', '$10?')">PURCHASE($10)</button>
+        </div>
+        <div class="igra16 igra">
+            <div class="thumbnail" style="background-image: url('slike/streetRace.png'); background-position: 50% 85%;"></div>
+            <p>Description: Become the best street racer in America. Drive fast cars on long roads. Evade the police while racing. The game uses real 
+                models and brands of real life cars.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 10.4.2022</li>
+                <li>Size: 13GB</li>
+                <li>Developer: SpeedNeed</li>
+                <li>Rating: 8/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('streetrace', '$22?')">PURCHASE($22)</button>
+        </div>
+        <div class="igra17 igra">
+            <div class="thumbnail" style="background-image: url('slike/theTrees.png'); background-position: 50% 40%;"></div>
+            <p>Description: A mysterious forest grew just outside the city. People would go to visit it and never return. What secrets could it hold? 
+                What entity placed it there? Are you brave enough to go inside yourself and uncover the truth?
+            </p>
+            <ul class="specs">
+                <li>Release Date: 28.7.2019</li>
+                <li>Size: 5.4GB</li>
+                <li>Developer: Wood Horris</li>
+                <li>Rating: 9/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('thetrees', '$5?')">PURCHASE($5)</button>
+        </div>
+        <div class="igra18 igra">
+            <div class="thumbnail" style="background-image: url('slike/westfrontier.png'); background-position: top;"></div>
+            <p>Description: A game about the wild west. You can rob banks, ride your trusty horse, evade the law, purchase classic weapons such as 
+                a double-action revolver, the M1899, carbine repeater, and many more.
+            </p>
+            <ul class="specs">
+                <li>Release Date: 9.12.2021</li>
+                <li>Size: 38GB</li>
+                <li>Developer: Star</li>
+                <li>Rating: 10/10</li>
+            </ul>
+            <button class="buy" onclick="purchase('westfrontier', '$40?')">PURCHASE($40)</button>
+        </div>
+    </div>
+
+    <div id="kontakt" class="hide kontakt">
+        <div class="contactContainer">
+            <h1 style="grid-column: 1 / 3; justify-self: center;">CONTACT US</h1>
+            <div class="socials">
+                <h2 style="justify-self: center;">SOCIALS</h2>
+                <ul>
+                    <li>Follow us on twitter: <a href="">https://twitter. com/joygame</a></li>
+                    <li>Follow us on facebook: <a href="">https://facebook/joygame</a></li>
+                    <li>Follow us on instagram: <a href="">https://instagram/joygame</a></li>
+                </ul>
+            </div>
+
+            <div class="support">
+                <h2 style="justify-self: center;">SUPPORT/BUSINESS</h2>
+                <ul>
+                    <li>If you want to remove a game you made contact: <a href="">joygameremoval@gmail.com</a></li>
+                    <li>If you have any business inquiries contact: <a href="">joygamebusiness@gmail.com</a></li>
+                    <li>If you are having issues with our site contact: <a href="">joygamesupport@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

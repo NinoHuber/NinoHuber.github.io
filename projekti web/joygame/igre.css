@@ -1,0 +1,55 @@
+.igre {
+    display: flex;
+    flex-direction: column;
+}
+
+.igra {
+    background: #444;
+    display: grid;
+    grid-template-columns: 10% 42% 30% 15%;
+    grid-template-rows: 100%;
+    grid-gap: 10px;
+    align-items: center;
+    color: red;
+    padding: 5px 5px;
+    margin-top: 15px;
+    border-bottom: solid 1px red;
+    opacity: 0;
+}
+
+.igraAnimation {
+    animation: igre .2s forwards;
+}
+
+@keyframes igre {
+    0%{opacity: 0; transform: translate(-2000px);}
+    100%{opacity: 1; transform: translate(0px);}
+}
+
+.thumbnail {
+    width: 100%;
+    height: 90px;
+}
+
+.specs {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.buy {
+    background: #222;
+    color: red;
+    border: solid 1px red;
+    border-radius: 5px;
+    padding: 15px 0px;
+}
+
+.buy:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px red;
+}
+
+.hide {
+    display: none;
+}

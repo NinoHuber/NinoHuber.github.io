@@ -1,0 +1,57 @@
+.purchaseContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.7);
+    z-index: 10;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.purchaseForm {
+    background: #444;
+    color: red;
+    padding: 25px;
+    border-radius: 5px;
+    border: solid #222 3px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+    animation: purchaseForm .4s forwards;
+}
+
+@keyframes purchaseForm {
+    0%{opacity: 0; transform: translate(0px, -50px);}
+    100%{opacity: 1; transform: translate(0px, 0px);}
+}
+
+.purchaseForm input {
+    border: none;
+    border-bottom: solid 1px red;
+    background: none;
+    outline: none;
+    color: red;
+}
+
+.purchaseForm button {
+    background: #222;
+    border: solid 2px red;
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: red;
+}
+
+.purchaseForm button:hover {
+    cursor: pointer;
+}
+
+#purchaseText {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.hide {
+    display: none;
+}
