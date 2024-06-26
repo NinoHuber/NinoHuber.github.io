@@ -21,7 +21,7 @@ function slider(direkcija) {
         }
     }
 }
-
+const anime = require('animejs')
 function animacija() {
     anime({
         targets: '.anim',
