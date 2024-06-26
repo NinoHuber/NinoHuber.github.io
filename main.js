@@ -21,7 +21,7 @@ function slider(direkcija) {
         }
     }
 }
-import anime from 'animejs/lib/anime.es.js'
+
 function animacija() {
     anime({
         targets: '.anim',
