@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopwatch</title>
+    <style>
+        button {
+            border: 2px black solid;
+            background: #aaa;
+            border-radius: 12px;
+            padding: 4px 10px;
+            margin-top: 15px;
+        }
+        button:hover {
+            cursor: pointer;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input">
+    <br>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <button onclick="resetTimer()">Reset</button>
+    <script>
+        var sekundi = 0;
+        var minuti = 0;
+        var input = document.getElementById("input");
+        input.value = minuti + ":" + "0" + sekundi;
+        var zaustavi = false;
+        function startTimer() {
+            if(zaustavi == true) {
+                zaustavi = false;
+                clearTimeout(timer);
+            }else if(sekundi == 59) {
+                sekundi = 0;
+                minuti += 1;
+                sekundi++;
+            }else {
+                sekundi++;
+            }
+            if(sekundi < 10) {
+                input.value = minuti + ":" + "0" + sekundi;
+            }else {
+                input.value = minuti + ":" + sekundi;
+            }
+            setTimeout(startTimer, 1000);
+            }
+        function stopTimer() {
+            zaustavi = true;
+        }
+        function resetTimer() {
+            sekundi = 0;
+            minuti = 0;
+            input.value = minuti + ":" + "0" + sekundi;
+        }
+    </script>
+</body>
+</html>

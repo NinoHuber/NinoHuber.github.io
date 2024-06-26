@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIST KAMEN MAKAZE</title>
+    <link rel="stylesheet" href="glavni.css">
+</head>
+<body>
+    
+    <div class="kontejner">
+        <div id="kraj">
+            <div class="krajKontejner">
+                <p id="krajText"></p>
+                <button onclick="ponovo()">Ponovo</button>
+            </div>
+        </div>
+        <p id="timer">Timer: 0:00</p>
+        <p id="runda">Runda: 0/5</p>
+        <h1>LIST KAMEN MAKAZE</h1>
+        <div class="opcije">
+            <img src="./slike/papir.png" alt="" onclick="igra('papir')">
+            <img src="./slike/kamen.png" alt="" onclick="igra('kamen')">
+            <img src="./slike/skare.png" alt="" onclick="igra('skare')">
+        </div>
+        <div class="rezultat">
+            <h1>Korisnik odabrao:</h1>
+            <h1>Bot odabrao:</h1>
+            <img src="" alt="" id="korisnikOdabrao">
+            <img src="" alt="" id="botOdabrao">
+            <h2 id="rezultatKorisnik">Korisnik: 0</h2>
+            <h2 id="rezultatBot">Bot: 0</h2>
+        </div>
+    </div>
+
+    <script src="glavni.js"></script>
+</body>
+</html>
